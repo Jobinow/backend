@@ -1,7 +1,7 @@
 {
   "nodes": {
-    "market": {
-      "name": "market",
+    "jobinow": {
+      "name": "jobinow",
       "type": "app",
       "data": {
         "root": "",
@@ -13,7 +13,7 @@
           "build": {
             "executor": "@angular-devkit/build-angular:application",
             "options": {
-              "outputPath": "dist/market",
+              "outputPath": "dist/jobinow",
               "index": "src/index.html",
               "browser": "src/main.ts",
               "polyfills": [
@@ -82,10 +82,10 @@
             "executor": "@angular-devkit/build-angular:dev-server",
             "configurations": {
               "production": {
-                "buildTarget": "market:build:production"
+                "buildTarget": "jobinow:build:production"
               },
               "development": {
-                "buildTarget": "market:build:development"
+                "buildTarget": "jobinow:build:development"
               }
             },
             "defaultConfiguration": "development",
@@ -94,7 +94,7 @@
           "extract-i18n": {
             "executor": "@angular-devkit/build-angular:extract-i18n",
             "options": {
-              "buildTarget": "market:build"
+              "buildTarget": "jobinow:build"
             },
             "configurations": {}
           },
@@ -118,7 +118,7 @@
             "configurations": {}
           }
         },
-        "name": "market",
+        "name": "jobinow",
         "implicitDependencies": [],
         "tags": []
       }
@@ -2127,9 +2127,9 @@
       "type": "npm",
       "name": "npm:@humanwhocodes/config-array",
       "data": {
-        "version": "0.11.13",
+        "version": "0.11.14",
         "packageName": "@humanwhocodes/config-array",
-        "hash": "sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ=="
+        "hash": "sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg=="
       }
     },
     "npm:@humanwhocodes/module-importer": {
@@ -2145,9 +2145,9 @@
       "type": "npm",
       "name": "npm:@humanwhocodes/object-schema",
       "data": {
-        "version": "2.0.1",
+        "version": "2.0.2",
         "packageName": "@humanwhocodes/object-schema",
-        "hash": "sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw=="
+        "hash": "sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw=="
       }
     },
     "npm:@isaacs/cliui": {
@@ -4260,9 +4260,9 @@
       "type": "npm",
       "name": "npm:@types/dompurify",
       "data": {
-        "version": "2.2.3",
+        "version": "3.0.5",
         "packageName": "@types/dompurify",
-        "hash": "sha512-CLtc2mZK8+axmrz1JqtpklO/Kvn38arGc8o1l3UVopZaXXuer9ONdZwJ/9f226GrhRLtUmLr9WrvZsRSNpS8og=="
+        "hash": "sha512-1Wg0g3BtQF7sSb27fJQAKck1HECM6zV1EB66j8JH9i3LCjYabJa0FSdiSgsD5K/RbrsR0SiraKacLB+T8ZVYAg=="
       }
     },
     "npm:@types/eslint": {
@@ -6528,9 +6528,9 @@
       "type": "npm",
       "name": "npm:dompurify",
       "data": {
-        "version": "2.2.9",
+        "version": "3.0.8",
         "packageName": "dompurify",
-        "hash": "sha512-+9MqacuigMIZ+1+EwoEltogyWGFTJZWU3258Rupxs+2CGs4H914G9er6pZbsme/bvb5L67o2rade9n21e4RW/w=="
+        "hash": "sha512-b7uwreMYL2eZhrSCRC4ahLTeZcPZxSmYfmcQGXGkXiZSNW1X85v+SDM5KsWcpivIiUBH47Ji7NtyUdpLeF5JZQ=="
       }
     },
     "npm:domutils": {
@@ -12088,305 +12088,305 @@
     }
   },
   "dependencies": {
-    "market": [
+    "jobinow": [
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/animations",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/cdk",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/common",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/compiler",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/core",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/forms",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/google-maps",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/platform-browser",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/platform-browser-dynamic",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/platform-server",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/router",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/ssr",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@cloudinary/ng",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@cloudinary/url-gen",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@nrwl/angular",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/addon-charts",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/addon-commerce",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/addon-doc",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/addon-mobile",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/addon-preview",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/addon-table",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/addon-tablebars",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/cdk",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/core",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/icons",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/kit",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/layout",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@taiga-ui/styles",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@tinkoff/ng-dompurify",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:chart.js",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:dompurify",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:express",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:flowbite",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:jwt-decode",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:ng2-charts",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:rxjs",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:sweetalert2",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:tailwind-scrollbar",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:tslib",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:zone.js",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular-devkit/build-angular",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/cli",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@angular/compiler-cli",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@types/dompurify",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@types/express",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@types/jasmine",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:@types/node",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:autoprefixer",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:daisyui",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:jasmine-core",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:karma",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:karma-chrome-launcher",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:karma-coverage",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:karma-jasmine",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:karma-jasmine-html-reporter",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:postcss",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:tailwindcss",
         "type": "static"
       },
       {
-        "source": "market",
+        "source": "jobinow",
         "target": "npm:typescript",
         "type": "static"
       },
       {
-        "source": "market",
-        "target": "npm:@tinkoff/ng-polymorpheus",
+        "source": "jobinow",
+        "target": "npm:@maskito/angular",
         "type": "static"
       },
       {
-        "source": "market",
-        "target": "npm:@maskito/angular",
+        "source": "jobinow",
+        "target": "npm:@tinkoff/ng-polymorpheus",
         "type": "static"
       }
     ],
@@ -18724,6 +18724,16 @@
       {
         "source": "npm:@tinkoff/ng-dompurify",
         "target": "npm:@angular/platform-browser",
+        "type": "static"
+      },
+      {
+        "source": "npm:@tinkoff/ng-dompurify",
+        "target": "npm:@types/dompurify",
+        "type": "static"
+      },
+      {
+        "source": "npm:@tinkoff/ng-dompurify",
+        "target": "npm:dompurify",
         "type": "static"
       },
       {

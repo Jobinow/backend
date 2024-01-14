@@ -16,6 +16,8 @@ import {
 import {TuiDataListWrapperModule, TuiInputModule, TuiSelectModule, TuiToggleModule} from '@taiga-ui/kit';
 import {AbstractTuiThemeSwitcher, TuiLetModule} from "@taiga-ui/cdk";
 import {initFlowbite} from 'flowbite';
+import {ChangeDetectionStrategy} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 
 @Component({
@@ -56,4 +58,8 @@ export class AppComponent extends AbstractTuiThemeSwitcher implements OnInit {
   }
 
   title = 'market';
+
+  readonly testForm = new FormGroup({
+    testValue: new FormControl('mail@mail.ru'),
+});
 }
