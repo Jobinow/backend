@@ -6,8 +6,8 @@ import {ForgotPasswordComponent} from "./features/auth/forgot-password/forgot-pa
 export const routes: Routes = [
   {
     path: 'auth',
-    component: LoginComponent,
     children: [
+      {path: '', component: LoginComponent},
       {path: 'login', component: LoginComponent},
       {path: 'register', component: RegisterComponent},
       {path: 'forgot-password', component: ForgotPasswordComponent},
