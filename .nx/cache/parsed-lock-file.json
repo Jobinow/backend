@@ -11200,9 +11200,9 @@
       "type": "npm",
       "name": "npm:sweetalert2",
       "data": {
-        "version": "11.10.3",
+        "version": "11.6.13",
         "packageName": "sweetalert2",
-        "hash": "sha512-mZYtQR7v+khyEruq0SsVUa6XIdI9Aue8s2XAIpAwdlLN1T0w7mxKEjyubiBZ3/bLbHC/wGS4wNABvXWubCizvA=="
+        "hash": "sha512-n5yVF0FNx1lm4XzpPyb1HIaiptzODfVyeCzmB809tpK+1bPdoKoevKOxYjrtId75DV7xuIp4r6cjn8xUAB8dPQ=="
       }
     },
     "npm:symbol-observable": {

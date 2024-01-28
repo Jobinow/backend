@@ -16,9 +16,10 @@ import {
 import {TuiDataListWrapperModule, TuiInputModule, TuiSelectModule, TuiToggleModule} from '@taiga-ui/kit';
 import {AbstractTuiThemeSwitcher, TuiLetModule} from "@taiga-ui/cdk";
 import {initFlowbite} from 'flowbite';
-import {ChangeDetectionStrategy} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
+import {BehaviorSubject, Observable} from "rxjs";
+import {NavBarComponent} from "./shared/nav-bar/nav-bar.component";
+import {SideBarComponent} from "./shared/side-bar/side-bar.component";
 
 @Component({
   selector: 'app-root',
@@ -43,6 +44,8 @@ import {HttpClientModule} from "@angular/common/http";
     TuiSelectModule,
     TuiDataListModule,
     TuiDataListWrapperModule,
+    NavBarComponent,
+    SideBarComponent,
   ],
   templateUrl: './app.component.html',
   providers: [
@@ -57,9 +60,13 @@ export class AppComponent extends AbstractTuiThemeSwitcher implements OnInit {
     initFlowbite();
   }
 
-  title = 'market';
+  isNight = false;
+  private nightSubject = new BehaviorSubject<boolean>(this.isNight);
 
-  readonly testForm = new FormGroup({
-    testValue: new FormControl('mail@mail.ru'),
-});
+  night$: Observable<boolean> = this.nightSubject.asObservable();
+
+  toggleNight() {
+    this.isNight = !this.isNight;
+    this.nightSubject.next(this.isNight);
+  }
 }
