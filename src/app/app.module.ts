@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule, provideCloudinaryLoader} from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {Range} from "./utils/range";
 import {NgDompurifySanitizer} from "@tinkoff/ng-dompurify";
 import {CloudinaryModule} from '@cloudinary/ng';
