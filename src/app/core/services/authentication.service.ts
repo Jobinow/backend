@@ -103,6 +103,7 @@ export class AuthenticationService {
             return throwError(error);
           })).subscribe((token) => {
         this.tokenStorage.setToken(token);
+        this.router.navigateTo('/user/profile');
         resolve(true);
       });
     });
