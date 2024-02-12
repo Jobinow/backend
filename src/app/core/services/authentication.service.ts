@@ -1,12 +1,12 @@
-import {Injectable} from '@angular/core';
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-import {Observable, throwError} from 'rxjs';
-import {TokenStorage} from './token-storage.service';
-import {RegisterRequest} from '../model/register-request';
-import {AuthenticationResponse} from '../model/authentication-response';
-import {LoginRequest} from "../model/login-request";
-import {catchError} from 'rxjs/operators';
-import {RoutingService} from "./routing.service";
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { TokenStorage } from './token-storage.service';
+import { RegisterRequest } from '../model/register-request';
+import { AuthenticationResponse } from '../model/authentication-response';
+import { LoginRequest } from "../model/login-request";
+import { catchError, map } from 'rxjs/operators';
+import { RoutingService } from "./routing.service";
 import { API_URL } from '../../config/api';
 
 @Injectable({
@@ -82,6 +82,29 @@ export class AuthenticationService {
         .subscribe((res) => {
           resolve(true);
         });
+    });
+  }
+
+  getOauthGoogleUrl(): Observable<string> {
+    return this.http.get<string>(`${API_URL}/Oauth/url`)
+      .pipe(
+        map((data: any) => data.authURL)
+      );
+  }
+
+  OauthGoogleAuthenticate(code: string) {
+    return new Promise<boolean>((resolve, reject) => {
+      this.http
+        .get<AuthenticationResponse>(`${API_URL}/Oauth/callback?code=${code}`)
+        .pipe(
+          catchError((error: HttpErrorResponse) => {
+            console.error(error)
+            reject(error);
+            return throwError(error);
+          })).subscribe((token) => {
+            this.tokenStorage.setToken(token);
+            resolve(true);
+          });
     });
   }
 

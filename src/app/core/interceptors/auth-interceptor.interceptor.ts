@@ -13,11 +13,10 @@ export class authInterceptorInterceptor implements HttpInterceptor {
     const token: string | null = this.tokenStorage.getAccessToken()
     const headers = new HttpHeaders().set('ngrok-skip-browser-warning', 'true');
 
+    if (token != null) headers.append('Authorization', `Bearer ${token}`);
+
     const authReq: HttpRequest<any> = request.clone({
-      setHeaders: {
-        Authorization: `Bearer ${token}`,
-        ...headers
-      }
+      headers
     });
 
     return next.handle(authReq);
