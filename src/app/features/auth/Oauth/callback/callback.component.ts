@@ -17,7 +17,6 @@ export class CallbackComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('callback');
     this.route.queryParams
       .subscribe(async (params) => {
           if (params["code"] !== undefined) {
