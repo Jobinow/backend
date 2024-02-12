@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute} from "@angular/router";
 import {AuthenticationService} from "../../../../core/services/authentication.service";
 
@@ -12,7 +11,6 @@ import {AuthenticationService} from "../../../../core/services/authentication.se
 export class CallbackComponent implements OnInit {
 
   constructor(
-    private http: HttpClient,
     private route: ActivatedRoute,
     private authService: AuthenticationService
   ) {
