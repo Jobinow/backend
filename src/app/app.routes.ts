@@ -10,6 +10,7 @@ export const routes: Routes = [
     children: [
       {path: '', component: LoginComponent},
       {path: 'login', component: LoginComponent},
+      {path: 'Oauth/callback', component: LoginComponent},
       {path: 'register', component: RegisterComponent},
       {path: 'forgot-password', component: ForgotPasswordComponent}
     ]

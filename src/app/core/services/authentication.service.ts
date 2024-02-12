@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { TokenStorage } from './token-storage.service';
-import { RegisterRequest } from '../model/register-request';
-import { AuthenticationResponse } from '../model/authentication-response';
-import { LoginRequest } from "../model/login-request";
-import { catchError, map } from 'rxjs/operators';
-import { RoutingService } from "./routing.service";
-import { API_URL } from '../../config/api';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {Observable, throwError} from 'rxjs';
+import {TokenStorage} from './token-storage.service';
+import {RegisterRequest} from '../model/register-request';
+import {AuthenticationResponse} from '../model/authentication-response';
+import {LoginRequest} from "../model/login-request";
+import {catchError, map} from 'rxjs/operators';
+import {RoutingService} from "./routing.service";
+import {API_URL} from '../../config/api';
 
 @Injectable({
   providedIn: 'root',
@@ -102,14 +102,18 @@ export class AuthenticationService {
             reject(error);
             return throwError(error);
           })).subscribe((token) => {
-            this.tokenStorage.setToken(token);
-            resolve(true);
-          });
+        this.tokenStorage.setToken(token);
+        resolve(true);
+      });
     });
   }
 
   logout(): void {
-    this.tokenStorage.clear();
-    this.router.navigateTo('/login');
+    this.http
+      .get<void>(`${API_URL}/auth/logout`)
+      .subscribe(() => {
+        this.tokenStorage.clear();
+        this.router.navigateTo('/login');
+      });
   }
 }
