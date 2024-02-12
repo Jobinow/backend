@@ -7,19 +7,19 @@ import {AuthenticationResponse} from '../model/authentication-response';
 import {LoginRequest} from "../model/login-request";
 import {catchError} from 'rxjs/operators';
 import {RoutingService} from "./routing.service";
+import { API_URL } from '../../config/api';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthenticationService {
-  private readonly baseUrl = 'http://localhost:8084/api/v2/auth';
 
   constructor(private http: HttpClient, private tokenStorage: TokenStorage, private router: RoutingService) {
   }
 
   register(request: RegisterRequest): Observable<AuthenticationResponse> {
     return this.http.post<AuthenticationResponse>(
-      `${this.baseUrl}/register`,
+      `${API_URL}/register`,
       request
     );
   }
@@ -27,7 +27,7 @@ export class AuthenticationService {
   authenticate(request: LoginRequest) {
     return new Promise<boolean>((resolve, reject) => {
       this.http
-        .post<AuthenticationResponse>(`${this.baseUrl}/authenticate`, request)
+        .post<AuthenticationResponse>(`${API_URL}/auth/authenticate`, request)
         .pipe(
           catchError((error: HttpErrorResponse) => {
             console.error(error)
@@ -52,7 +52,7 @@ export class AuthenticationService {
 
   refreshToken() {
     this.http
-      .post<void>(`${this.baseUrl}/refresh-token`, {},
+      .post<void>(`${API_URL}/auth/refresh-token`, {},
         {
           headers: {
             Authorization: `Bearer ${this.tokenStorage.getRefreshToken()}`
@@ -68,7 +68,7 @@ export class AuthenticationService {
       return Promise.resolve(false);
     }
     return new Promise<boolean>((resolve, reject) => {
-      this.http.post(`${this.baseUrl}/check-token`, {
+      this.http.post(`${API_URL}/auth/check-token`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

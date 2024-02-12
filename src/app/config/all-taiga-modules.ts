@@ -217,7 +217,6 @@ import {
 import {TuiPreviewActionModule, TuiPreviewDialogModule, TuiPreviewModule} from '@taiga-ui/addon-preview';
 import {TuiReorderModule, TuiTableFiltersModule, TuiTableModule, TuiTablePaginationModule} from '@taiga-ui/addon-table';
 import {TuiTableBarsHostModule} from '@taiga-ui/addon-tablebars';
-
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -226,6 +225,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaskitoModule} from '@maskito/angular';
 import {PolymorpheusModule} from '@tinkoff/ng-polymorpheus';
+
 
 
 export const ALL_TAIGA_UI_MODULES = [

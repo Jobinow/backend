@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, Inject} from '@angular/core';
-import {TuiAlertService, TuiTextfieldControllerModule} from '@taiga-ui/core';
+import {TuiAlertService, TuiButtonModule, TuiTextfieldControllerModule} from '@taiga-ui/core';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
-import {TUI_PASSWORD_TEXTS, TuiInputModule, TuiInputPasswordModule} from '@taiga-ui/kit';
+import {TUI_PASSWORD_TEXTS, TuiInputModule, TuiInputPasswordModule, TuiMarkerIconModule} from '@taiga-ui/kit';
 import {of} from 'rxjs';
 import * as events from "events";
 import {AuthLayoutComponent} from "../../../layout/auth-layout/auth-layout.component";
@@ -15,6 +15,8 @@ import {RoutingService} from "../../../core/services/routing.service";
     AuthLayoutComponent,
     FormsModule,
     ReactiveFormsModule,
+    TuiMarkerIconModule,
+    TuiButtonModule,
     TuiTextfieldControllerModule,
     TuiInputPasswordModule,
     TuiInputModule
