@@ -76,19 +76,19 @@
         },
         {
           "file": ".nx/cache/file-map.json",
-          "hash": "5958492206610594575"
+          "hash": "1116301669622538497"
         },
         {
           "file": ".nx/cache/lockfile.hash",
-          "hash": "11114883397752162558"
+          "hash": "7434932973920992800"
         },
         {
           "file": ".nx/cache/parsed-lock-file.json",
-          "hash": "8533800237352536425"
+          "hash": "4607675065053242729"
         },
         {
           "file": ".nx/cache/project-graph.json",
-          "hash": "11549302436624842090"
+          "hash": "14556751165104849660"
         },
         {
           "file": ".vscode/extensions.json",
@@ -112,11 +112,11 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "11604981898269657370"
+          "hash": "13994611600983003001"
         },
         {
           "file": "package.json",
-          "hash": "15156796641532430928",
+          "hash": "7654426716579623484",
           "deps": [
             "npm:@angular/animations",
             "npm:@angular/cdk",
@@ -191,11 +191,11 @@
         },
         {
           "file": "src/app/app.component.css",
-          "hash": "8862820801399748170"
+          "hash": "7294488502755838103"
         },
         {
           "file": "src/app/app.component.html",
-          "hash": "7396960663651324576"
+          "hash": "634486671279914468"
         },
         {
           "file": "src/app/app.component.spec.ts",
@@ -230,7 +230,7 @@
         },
         {
           "file": "src/app/app.config.ts",
-          "hash": "4837379875809354320",
+          "hash": "13082216762258255527",
           "deps": [
             "npm:@angular/platform-browser",
             "npm:@angular/core",
@@ -240,7 +240,7 @@
         },
         {
           "file": "src/app/app.module.ts",
-          "hash": "13845980536776610618",
+          "hash": "1930851631934721348",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -252,14 +252,14 @@
         },
         {
           "file": "src/app/app.routes.ts",
-          "hash": "1444699245690058018",
+          "hash": "296576725878009512",
           "deps": [
             "npm:@angular/router"
           ]
         },
         {
           "file": "src/app/config/all-taiga-modules.ts",
-          "hash": "12247767394207539382",
+          "hash": "9316168177790818559",
           "deps": [
             "npm:@taiga-ui/cdk",
             "npm:@taiga-ui/core",
@@ -281,7 +281,7 @@
         },
         {
           "file": "src/app/config/api.ts",
-          "hash": "4688943991262507105"
+          "hash": "2771382722799121081"
         },
         {
           "file": "src/app/config/cloudinary.ts",
@@ -297,7 +297,7 @@
         },
         {
           "file": "src/app/core/interceptors/auth-interceptor.interceptor.ts",
-          "hash": "14683144802886488054",
+          "hash": "6142923738142853204",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -344,7 +344,7 @@
         },
         {
           "file": "src/app/core/services/authentication.service.ts",
-          "hash": "9338558912107342410",
+          "hash": "18190247660770505172",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -383,6 +383,18 @@
           "hash": "3244421341483603138"
         },
         {
+          "file": "src/app/features/auth/Oauth/callback/callback.component.html",
+          "hash": "976752718124079365"
+        },
+        {
+          "file": "src/app/features/auth/Oauth/callback/callback.component.ts",
+          "hash": "17700617863991428797",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
           "file": "src/app/features/auth/forgot-password/forgot-password.component.css",
           "hash": "3244421341483603138"
         },
@@ -410,7 +422,7 @@
         },
         {
           "file": "src/app/features/auth/login/login.component.html",
-          "hash": "18408481978524136781"
+          "hash": "14297533587169242193"
         },
         {
           "file": "src/app/features/auth/login/login.component.spec.ts",
@@ -421,7 +433,7 @@
         },
         {
           "file": "src/app/features/auth/login/login.component.ts",
-          "hash": "9291919713030150818",
+          "hash": "13259207865923482921",
           "deps": [
             "npm:@angular/core",
             "npm:@taiga-ui/core",
@@ -437,7 +449,7 @@
         },
         {
           "file": "src/app/features/auth/register/register.component.html",
-          "hash": "2489894839149508814"
+          "hash": "3103664550502236795"
         },
         {
           "file": "src/app/features/auth/register/register.component.spec.ts",
@@ -448,9 +460,38 @@
         },
         {
           "file": "src/app/features/auth/register/register.component.ts",
-          "hash": "16175230249381539210",
+          "hash": "3178695115428343222",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@taiga-ui/kit",
+            "npm:@taiga-ui/addon-table",
+            "npm:@taiga-ui/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "src/app/features/job-seeker/profile/profile.component.css",
+          "hash": "2178529001638699599"
+        },
+        {
+          "file": "src/app/features/job-seeker/profile/profile.component.html",
+          "hash": "12398832232627293635"
+        },
+        {
+          "file": "src/app/features/job-seeker/profile/profile.component.spec.ts",
+          "hash": "11296036127841336762",
           "deps": [
             "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/features/job-seeker/profile/profile.component.ts",
+          "hash": "1043624485154499651",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@taiga-ui/core",
+            "npm:@taiga-ui/kit"
           ]
         },
         {
@@ -799,7 +840,7 @@
         },
         {
           "file": "src/index.html",
-          "hash": "12157400463809461241"
+          "hash": "16384994179141689665"
         },
         {
           "file": "src/main.server.ts",

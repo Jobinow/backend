@@ -101,7 +101,7 @@ export class AuthenticationService {
             console.error(error)
             reject(error);
             return throwError(error);
-          })).subscribe((token) => {
+          })).subscribe((token: AuthenticationResponse) => {
         this.tokenStorage.setToken(token);
         this.router.navigateTo('/user/profile');
         resolve(true);
