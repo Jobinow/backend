@@ -1,5 +1,8 @@
 <div class="quiz__splash__page">
-  <div class="absolute z-0 w-screen h-screen">
+  <div class="absolute w-screen h-screen z-0">
+    <img ngSrc="/assets/image/quiz/quizePatternImage.jpeg" fill class="h-screen w-full opacity-50" alt="bg-image"/>
+  </div>
+  <div class="absolute z-10 w-screen h-screen">
     <app-auth-background></app-auth-background>
   </div>
   <div class="h-screen dark:text-white flex justify-center items-center">
@@ -64,5 +67,17 @@
         </div>
       </div>
     </div>
+  </div>
+  <div
+    class="fixed bottom-0 w-screen h-16 from-gray-300 bg-gradient-to-t to-transparent dark:from-gray-500 flex items-center pl-4 bg-opacity-20">
+    <button class="flex items-center focus:outline-none" aria-label="toggle profile dropdown">
+      <div class="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
+        <img ngSrc="assets/ts.jpg" class="object-cover w-full h-full" alt="avatar" height="2969" width="3000">
+      </div>
+      <div class="flex flex-col">
+        <h3 class="mx-2 hidden md:block">Ouharri</h3>
+        <h3 class="mx-2 hidden md:block">Outman</h3>
+      </div>
+    </button>
   </div>
 </div>

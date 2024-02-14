@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TuiMarkerIconModule } from '@taiga-ui/kit';
 import {AuthBackgroundComponent} from "../../../shared/auth-background/auth-background.component";
+import {NgOptimizedImage} from "@angular/common";
+import {NavBarComponent} from "../../../shared/nav-bar/nav-bar.component";
 
 @Component({
   selector: 'app-quiz',
@@ -9,7 +11,9 @@ import {AuthBackgroundComponent} from "../../../shared/auth-background/auth-back
   imports: [
     TuiMarkerIconModule,
     RouterModule,
-    AuthBackgroundComponent
+    AuthBackgroundComponent,
+    NgOptimizedImage,
+    NavBarComponent
   ],
   templateUrl: './quiz.component.html',
   styleUrl: './quiz.component.css'
