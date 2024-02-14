@@ -1,8 +1,7 @@
-import { Injectable } from '@angular/core';
-import { HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpRequest } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { TokenStorage } from "../services/token-storage.service";
-import { log } from 'console';
+import {Injectable} from '@angular/core';
+import {HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpRequest} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {TokenStorage} from "../services/token-storage.service";
 
 @Injectable()
 export class authInterceptorInterceptor implements HttpInterceptor {
@@ -11,13 +10,12 @@ export class authInterceptorInterceptor implements HttpInterceptor {
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
-    const token: string = this.tokenStorage.getAccessToken() as string;
-    let headers = null;
+    let headers: HttpHeaders;
+    const token: string | null = this.tokenStorage.getAccessToken();
 
     if (token != null) headers = new HttpHeaders()
-      .append('Authorization', `Bearer ${token}`)
-      .append('ngrok-skip-browser-warning', 'true');
+      .set('ngrok-skip-browser-warning', 'true')
+      .append('Authorization', `Bearer ${token}`);
 
     else headers =
       new HttpHeaders()
