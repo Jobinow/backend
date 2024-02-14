@@ -76,7 +76,7 @@
         },
         {
           "file": ".nx/cache/file-map.json",
-          "hash": "1116301669622538497"
+          "hash": "3152834856613954711"
         },
         {
           "file": ".nx/cache/lockfile.hash",
@@ -195,7 +195,7 @@
         },
         {
           "file": "src/app/app.component.html",
-          "hash": "634486671279914468"
+          "hash": "12237477873467273416"
         },
         {
           "file": "src/app/app.component.spec.ts",
@@ -252,7 +252,7 @@
         },
         {
           "file": "src/app/app.routes.ts",
-          "hash": "296576725878009512",
+          "hash": "2198264693976674036",
           "deps": [
             "npm:@angular/router"
           ]
@@ -281,7 +281,7 @@
         },
         {
           "file": "src/app/config/api.ts",
-          "hash": "2771382722799121081"
+          "hash": "7615730783687885717"
         },
         {
           "file": "src/app/config/cloudinary.ts",
@@ -297,11 +297,12 @@
         },
         {
           "file": "src/app/core/interceptors/auth-interceptor.interceptor.ts",
-          "hash": "6142923738142853204",
+          "hash": "11522050039225406081",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
-            "npm:rxjs"
+            "npm:rxjs",
+            "npm:console"
           ]
         },
         {
@@ -344,7 +345,7 @@
         },
         {
           "file": "src/app/core/services/authentication.service.ts",
-          "hash": "18190247660770505172",
+          "hash": "12028637415623766043",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -476,7 +477,7 @@
         },
         {
           "file": "src/app/features/job-seeker/profile/profile.component.html",
-          "hash": "12398832232627293635"
+          "hash": "13185096658252145539"
         },
         {
           "file": "src/app/features/job-seeker/profile/profile.component.spec.ts",
@@ -487,11 +488,60 @@
         },
         {
           "file": "src/app/features/job-seeker/profile/profile.component.ts",
-          "hash": "1043624485154499651",
+          "hash": "17739968538920457696",
           "deps": [
             "npm:@angular/core",
             "npm:@taiga-ui/core",
+            "npm:@taiga-ui/kit",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "src/app/features/job-seeker/quiz/quiz.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/features/job-seeker/quiz/quiz.component.html",
+          "hash": "16080916107490485646"
+        },
+        {
+          "file": "src/app/features/job-seeker/quiz/quiz.component.spec.ts",
+          "hash": "13988229712601641730",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/features/job-seeker/quiz/quiz.component.ts",
+          "hash": "2335505500935012710",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
             "npm:@taiga-ui/kit"
+          ]
+        },
+        {
+          "file": "src/app/features/job-seeker/quiz-question/quiz-question.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/features/job-seeker/quiz-question/quiz-question.component.html",
+          "hash": "8257559183871860680"
+        },
+        {
+          "file": "src/app/features/job-seeker/quiz-question/quiz-question.component.spec.ts",
+          "hash": "11309052638273968564",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/features/job-seeker/quiz-question/quiz-question.component.ts",
+          "hash": "8479453913019533064",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/common"
           ]
         },
         {
@@ -678,7 +728,7 @@
         },
         {
           "file": "src/app/shared/nav-bar/nav-bar.component.html",
-          "hash": "4834975805413045561"
+          "hash": "2214267361383496730"
         },
         {
           "file": "src/app/shared/nav-bar/nav-bar.component.spec.ts",
@@ -785,6 +835,28 @@
           ]
         },
         {
+          "file": "src/app/shared/timer/timer.component.css",
+          "hash": "15349243235246704063"
+        },
+        {
+          "file": "src/app/shared/timer/timer.component.html",
+          "hash": "2603036406614038267"
+        },
+        {
+          "file": "src/app/shared/timer/timer.component.spec.ts",
+          "hash": "5645516817258671911",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/shared/timer/timer.component.ts",
+          "hash": "4389402626804972958",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
           "file": "src/app/shared/waves/waves.component.css",
           "hash": "6932217387440880466"
         },
@@ -825,6 +897,14 @@
         {
           "file": "src/assets/.gitkeep",
           "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/assets/image/quiz/quizePatternImage.jpeg",
+          "hash": "2361323702527834187"
+        },
+        {
+          "file": "src/assets/image/quiz/quizeStartImage.png",
+          "hash": "12069010523453633343"
         },
         {
           "file": "src/assets/image.jpeg",
