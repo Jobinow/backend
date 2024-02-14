@@ -109,6 +109,20 @@ export class AuthenticationService {
     });
   }
 
+  getCurrentAuthenticatedUser() {
+    console.log(this.tokenStorage.getAccessToken());
+
+    return this.http
+      .get(`${API_URL}/user/current`, {
+        headers: {
+          Authorization: `Bearer ${this.tokenStorage.getAccessToken()}`
+        }
+      })
+      .pipe(map(res => {
+        return res;
+      }));
+  }
+
   logout(): void {
     this.http
       .get<void>(`${API_URL}/auth/logout`)
