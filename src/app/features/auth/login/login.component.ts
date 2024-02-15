@@ -1,12 +1,12 @@
-import {ChangeDetectionStrategy, Component, Inject} from '@angular/core';
-import {TuiAlertService, TuiTextfieldControllerModule} from '@taiga-ui/core';
-import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
-import {TUI_PASSWORD_TEXTS, TuiInputModule, TuiInputPasswordModule} from '@taiga-ui/kit';
-import {of} from 'rxjs';
+import { ChangeDetectionStrategy, Component, Inject, OnInit } from '@angular/core';
+import { TuiAlertService, TuiButtonModule, TuiTextfieldControllerModule } from '@taiga-ui/core';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
+import { TUI_PASSWORD_TEXTS, TuiInputModule, TuiInputPasswordModule, TuiMarkerIconModule } from '@taiga-ui/kit';
+import { of } from 'rxjs';
 import * as events from "events";
-import {AuthLayoutComponent} from "../../../layout/auth-layout/auth-layout.component";
-import {AuthenticationService} from "../../../core/services/authentication.service";
-import {RoutingService} from "../../../core/services/routing.service";
+import { AuthLayoutComponent } from "../../../layout/auth-layout/auth-layout.component";
+import { AuthenticationService } from "../../../core/services/authentication.service";
+import { RoutingService } from "../../../core/services/routing.service";
 
 @Component({
   selector: 'app-login',
@@ -15,6 +15,8 @@ import {RoutingService} from "../../../core/services/routing.service";
     AuthLayoutComponent,
     FormsModule,
     ReactiveFormsModule,
+    TuiMarkerIconModule,
+    TuiButtonModule,
     TuiTextfieldControllerModule,
     TuiInputPasswordModule,
     TuiInputModule
@@ -29,12 +31,25 @@ import {RoutingService} from "../../../core/services/routing.service";
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   constructor(
     @Inject(TuiAlertService) private readonly alerts: TuiAlertService,
     private authService: AuthenticationService,
     private router: RoutingService
   ) {
+  }
+
+  googleOauthUrl: string | null = null;
+  googleOauthUrlNotReady: boolean = true;
+
+  ngOnInit(): void {
+    this.authService.getOauthGoogleUrl().subscribe((url: string) => {
+      this.googleOauthUrl = url;
+      if (this.googleOauthUrl != null || this.googleOauthUrl != "")
+        this.googleOauthUrlNotReady = false;
+    });
+
+
   }
 
   loginForm: FormGroup<any> = new FormGroup({

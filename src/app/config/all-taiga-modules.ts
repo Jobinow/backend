@@ -8,7 +8,6 @@ import {
   TuiControlModule,
   TuiCopyProcessorModule,
   TuiDialogHostModule,
-  TuiDragModule,
   TuiDropdownHostModule,
   TuiDroppableModule,
   TuiElementModule,
@@ -17,7 +16,6 @@ import {
   TuiFocusedModule,
   TuiFocusTrapModule,
   TuiFocusVisibleModule,
-  TuiForAsyncModule,
   TuiForModule,
   TuiHighDpiModule,
   TuiHoveredModule,
@@ -33,7 +31,6 @@ import {
   TuiPlatformModule,
   TuiPortalModule,
   TuiPressedModule,
-  TuiPreventDefaultModule,
   TuiRepeatTimesModule,
   TuiReplacePipeModule,
   TuiResizeModule,
@@ -87,7 +84,6 @@ import {
   TuiWrapperModule
 } from '@taiga-ui/core';
 import {
-  TextMaskModule,
   TuiAccordionModule,
   TuiActionModule,
   TuiArrowModule,
@@ -112,7 +108,6 @@ import {
   TuiFilterModule,
   TuiHighlightModule,
   TuiInputCopyModule,
-  TuiInputCountModule,
   TuiInputDateModule,
   TuiInputDateMultiModule,
   TuiInputDateRangeModule,
@@ -164,7 +159,6 @@ import {
   TuiStringifyPipeModule,
   TuiTabsModule,
   TuiTagModule,
-  TuiTextAreaModule,
   TuiTextareaModule,
   TuiTilesModule,
   TuiToggleModule,
@@ -187,7 +181,6 @@ import {
   TuiRingChartModule
 } from '@taiga-ui/addon-charts';
 import {
-  TuiCardModule,
   TuiCurrencyPipeModule,
   TuiFormatCardModule,
   TuiInputCardGroupedModule,
@@ -207,7 +200,6 @@ import {
   TuiPullToRefreshModule,
   TuiRippleModule,
   TuiSheetDialogModule,
-  TuiSheetModule,
   TuiSidebarModule,
   TuiTabBarModule,
   TuiThemeAndroidModule,
@@ -217,7 +209,6 @@ import {
 import {TuiPreviewActionModule, TuiPreviewDialogModule, TuiPreviewModule} from '@taiga-ui/addon-preview';
 import {TuiReorderModule, TuiTableFiltersModule, TuiTableModule, TuiTablePaginationModule} from '@taiga-ui/addon-table';
 import {TuiTableBarsHostModule} from '@taiga-ui/addon-tablebars';
-
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -250,7 +241,6 @@ export const ALL_TAIGA_UI_MODULES = [
   TuiCopyProcessorModule,
   TuiDialogHostModule,
   TuiScrollbarModule, TuiThemeNightModule,
-  TuiDragModule,
   TuiDropdownHostModule,
   TuiDroppableModule,
   TuiElementModule,
@@ -259,7 +249,6 @@ export const ALL_TAIGA_UI_MODULES = [
   TuiFocusVisibleModule,
   TuiFocusableModule,
   TuiFocusedModule,
-  TuiForAsyncModule,
   TuiForModule,
   TuiHighDpiModule,
   TuiHoveredModule,
@@ -275,7 +264,6 @@ export const ALL_TAIGA_UI_MODULES = [
   TuiPlatformModule,
   TuiPortalModule,
   TuiPressedModule,
-  TuiPreventDefaultModule,
   TuiRepeatTimesModule,
   TuiReplacePipeModule,
   TuiResizeModule,
@@ -326,7 +314,6 @@ export const ALL_TAIGA_UI_MODULES = [
   TuiTooltipModule,
   TuiWrapperModule,
   /* KIT */
-  TextMaskModule,
   TuiAccordionModule,
   TuiActionModule,
   TuiArrowModule,
@@ -351,7 +338,6 @@ export const ALL_TAIGA_UI_MODULES = [
   TuiFilterModule,
   TuiHighlightModule,
   TuiInputCopyModule,
-  TuiInputCountModule,
   TuiInputDateModule,
   TuiInputDateMultiModule,
   TuiInputDateRangeModule,
@@ -403,7 +389,6 @@ export const ALL_TAIGA_UI_MODULES = [
   TuiStringifyPipeModule,
   TuiTabsModule,
   TuiTagModule,
-  TuiTextAreaModule,
   TuiTextareaModule,
   TuiTilesModule,
   TuiToYearPipeModule,
@@ -424,7 +409,6 @@ export const ALL_TAIGA_UI_MODULES = [
   TuiPieChartModule,
   TuiRingChartModule,
   /* ADDON-COMMERCE */
-  TuiCardModule,
   TuiCurrencyPipeModule,
   TuiFormatCardModule,
   TuiInputCVCModule,
@@ -443,7 +427,6 @@ export const ALL_TAIGA_UI_MODULES = [
   TuiPullToRefreshModule,
   TuiRippleModule,
   TuiSheetDialogModule,
-  TuiSheetModule,
   TuiSidebarModule,
   TuiTabBarModule,
   TuiThemeAndroidModule,
@@ -458,7 +441,7 @@ export const ALL_TAIGA_UI_MODULES = [
   TuiTableFiltersModule,
   TuiTableModule,
   TuiTablePaginationModule,
-  /* ADDON-TABLEBARS */
+  /* ADDON-TABLE BARS */
   TuiTableBarsHostModule,
   /* EXAMPLE MODULES */
 ];

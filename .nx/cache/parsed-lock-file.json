@@ -2587,9 +2587,9 @@
       "type": "npm",
       "name": "npm:@ng-web-apis/mutation-observer",
       "data": {
-        "version": "3.0.6",
+        "version": "3.1.0",
         "packageName": "@ng-web-apis/mutation-observer",
-        "hash": "sha512-UW1qoUi2whH0uWkVz5qpdYCLs1u2T0E0QoCMQKZfLEkBpsWRTkT0PTCa9WWX/BhehaSPg23nZZm8BEixd6PI9w=="
+        "hash": "sha512-MFN0TLLBMFJJPpXkGFe9ChRCSOKvMHZRRtBq5jHWS7tv5/CtdUkqW5CU7RC9KTzZjGeMzYe0cXO4JRkjL5aZ9g=="
       }
     },
     "npm:@ng-web-apis/resize-observer": {
@@ -2916,15 +2916,6 @@
         "hash": "sha512-tUpxzX0VAzJHjLu0xUfFv1gwVp9ba3IOuRAVH2EGuRW8a5emA2FlACLqiT/lDVtS1W+TGNwqz3sWaNyLgDJWuw=="
       }
     },
-    "npm:minimatch@7.4.6": {
-      "type": "npm",
-      "name": "npm:minimatch@7.4.6",
-      "data": {
-        "version": "7.4.6",
-        "packageName": "minimatch",
-        "hash": "sha512-sBz8G/YjVniEz6lKPNpKxXwazJe4c19fEfV2GDMX6AjFz+MX9uDWIZW8XreVhkFW3fkIdTv/gxWr/Kks5FFAVw=="
-      }
-    },
     "npm:minimatch@9.0.3": {
       "type": "npm",
       "name": "npm:minimatch@9.0.3",
@@ -3058,6 +3049,15 @@
         "version": "3.2.7",
         "packageName": "fast-glob",
         "hash": "sha512-rYGMRwip6lUMvYD3BTScMwT1HtAs2d71SMv66Vrxs0IekGZEjhM0pcMfjQPnknBt2zeCwQMEupiN02ZP4DiT1Q=="
+      }
+    },
+    "npm:fast-glob@3.3.2": {
+      "type": "npm",
+      "name": "npm:fast-glob@3.3.2",
+      "data": {
+        "version": "3.3.2",
+        "packageName": "fast-glob",
+        "hash": "sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow=="
       }
     },
     "npm:fast-glob": {
@@ -3838,9 +3838,9 @@
       "type": "npm",
       "name": "npm:@taiga-ui/cdk",
       "data": {
-        "version": "3.56.0",
+        "version": "3.65.0",
         "packageName": "@taiga-ui/cdk",
-        "hash": "sha512-NP5V9L1eypXE15YTBClLDVN5TleUR6sK7KguEfV4mdC3OCUhp3c0Wx11a2D36izZIfFyrpXzCkDmZsgu5pUTFQ=="
+        "hash": "sha512-hiFC9RlRng7pUv84YPZbqieKIYsFEzsMKCjMIckHBASBBU6qQ4OY6irKszFvTGqMe9KJgBh6sJU1hkQOBwFSaA=="
       }
     },
     "npm:@taiga-ui/core": {
@@ -3865,9 +3865,9 @@
       "type": "npm",
       "name": "npm:@taiga-ui/icons",
       "data": {
-        "version": "3.56.0",
+        "version": "3.65.0",
         "packageName": "@taiga-ui/icons",
-        "hash": "sha512-h3vXJW53oqFeEceL0gr3HJkfuNKRo+kh6+haObaooZOGs45F4MWBVuoW9WlHdn/8pln8DE0dXDlx0s1C+YiDcQ=="
+        "hash": "sha512-8iE6EuK+QBzcNiRM1ThZOOkZpal7V6dBouMXMj+QphRWiIp8Znj58mtY3L+uwQFpGnxt3DRs4p4eEA9ZuGFssw=="
       }
     },
     "npm:@taiga-ui/kit": {
@@ -3937,9 +3937,9 @@
       "type": "npm",
       "name": "npm:@ts-morph/common",
       "data": {
-        "version": "0.21.0",
+        "version": "0.22.0",
         "packageName": "@ts-morph/common",
-        "hash": "sha512-ES110Mmne5Vi4ypUKrtVQfXFDtCsDXiUiGxF6ILVlE90dDD4fdpC1LSjydl/ml7xJWKSDZwUYD2zkOePMSrPBA=="
+        "hash": "sha512-HqNBuV/oIlMKdkLshXd1zKBqNQCsuPEsgQOkfFQ/eUKjRlwndXW1AjN9LVkBEIukm00gGXSRmfkl0Wv5VXLnlw=="
       }
     },
     "npm:brace-expansion@2.0.1": {
@@ -3960,13 +3960,13 @@
         "hash": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA=="
       }
     },
-    "npm:mkdirp@2.1.6": {
+    "npm:mkdirp@3.0.1": {
       "type": "npm",
-      "name": "npm:mkdirp@2.1.6",
+      "name": "npm:mkdirp@3.0.1",
       "data": {
-        "version": "2.1.6",
+        "version": "3.0.1",
         "packageName": "mkdirp",
-        "hash": "sha512-+hEnITedc8LAtIP9u3HJDFIdcLV2vXP33sqLLIzkv1Db1zO/1OxbvYf0Y1OC/S/Qo5dxHXepofhmxL02PsKe+A=="
+        "hash": "sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg=="
       }
     },
     "npm:mkdirp": {
@@ -9373,9 +9373,9 @@
       "type": "npm",
       "name": "npm:ng-morph",
       "data": {
-        "version": "4.0.3",
+        "version": "4.0.5",
         "packageName": "ng-morph",
-        "hash": "sha512-4voBApzsUs0/1zJsV2sSVPoOKxWt0gBd+3yqE/q8oYOX87RN3HwcJmqQLtWEU4tbmhk11gSRIFIl61+z32cnNw=="
+        "hash": "sha512-5tnlb5WrGKeo2E7VRcV7ZHhScyNgliYqpbXqt103kynmfj6Ic8kzhJAhHu9iLkF1yRnKv2kyCE+O7UGZx5RraQ=="
       }
     },
     "npm:ng2-charts": {
@@ -11416,9 +11416,9 @@
       "type": "npm",
       "name": "npm:ts-morph",
       "data": {
-        "version": "20.0.0",
+        "version": "21.0.1",
         "packageName": "ts-morph",
-        "hash": "sha512-JVmEJy2Wow5n/84I3igthL9sudQ8qzjh/6i4tmYCm6IqYyKFlNbJZi7oBdjyqcWSWYRu3CtL0xbT6fS03ESZIg=="
+        "hash": "sha512-dbDtVdEAncKctzrVZ+Nr7kHpHkv+0JDJb2MjjpBaj8bFeCkePU9rHfMklmhuLFnpeq/EJZk2IhStY6NzqgjOkg=="
       }
     },
     "npm:ts-node": {
@@ -18125,17 +18125,17 @@
     },
     {
       "source": "npm:@ts-morph/common",
-      "target": "npm:fast-glob",
+      "target": "npm:fast-glob@3.3.2",
       "type": "static"
     },
     {
       "source": "npm:@ts-morph/common",
-      "target": "npm:minimatch@7.4.6",
+      "target": "npm:minimatch@9.0.3",
       "type": "static"
     },
     {
       "source": "npm:@ts-morph/common",
-      "target": "npm:mkdirp@2.1.6",
+      "target": "npm:mkdirp@3.0.1",
       "type": "static"
     },
     {
@@ -18149,7 +18149,32 @@
       "type": "static"
     },
     {
-      "source": "npm:minimatch@7.4.6",
+      "source": "npm:fast-glob@3.3.2",
+      "target": "npm:@nodelib/fs.stat",
+      "type": "static"
+    },
+    {
+      "source": "npm:fast-glob@3.3.2",
+      "target": "npm:@nodelib/fs.walk",
+      "type": "static"
+    },
+    {
+      "source": "npm:fast-glob@3.3.2",
+      "target": "npm:glob-parent",
+      "type": "static"
+    },
+    {
+      "source": "npm:fast-glob@3.3.2",
+      "target": "npm:merge2",
+      "type": "static"
+    },
+    {
+      "source": "npm:fast-glob@3.3.2",
+      "target": "npm:micromatch",
+      "type": "static"
+    },
+    {
+      "source": "npm:minimatch@9.0.3",
       "target": "npm:brace-expansion@2.0.1",
       "type": "static"
     },
