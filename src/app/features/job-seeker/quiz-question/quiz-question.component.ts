@@ -3,7 +3,7 @@ import {TimerComponent} from "../../../shared/timer/timer.component";
 import {RouterLink} from "@angular/router";
 import {NgFor, NgOptimizedImage} from "@angular/common";
 import { QuizQuestionResponseComponent } from '../quiz-question-response/quiz-question-response.component';
-import { Question } from '../../../core/interfaces/question';
+import { Question } from '../../../core/model/question';
 
 @Component({
   selector: 'app-quiz-question',

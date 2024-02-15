@@ -76,7 +76,7 @@
         },
         {
           "file": ".nx/cache/file-map.json",
-          "hash": "3152834856613954711"
+          "hash": "4964147822293390726"
         },
         {
           "file": ".nx/cache/lockfile.hash",
@@ -259,7 +259,7 @@
         },
         {
           "file": "src/app/config/all-taiga-modules.ts",
-          "hash": "9316168177790818559",
+          "hash": "7062453574673826945",
           "deps": [
             "npm:@taiga-ui/cdk",
             "npm:@taiga-ui/core",
@@ -281,7 +281,7 @@
         },
         {
           "file": "src/app/config/api.ts",
-          "hash": "7615730783687885717"
+          "hash": "15775688195531337285"
         },
         {
           "file": "src/app/config/cloudinary.ts",
@@ -297,12 +297,11 @@
         },
         {
           "file": "src/app/core/interceptors/auth-interceptor.interceptor.ts",
-          "hash": "11522050039225406081",
+          "hash": "1215301271065628192",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
-            "npm:rxjs",
-            "npm:console"
+            "npm:rxjs"
           ]
         },
         {
@@ -502,7 +501,7 @@
         },
         {
           "file": "src/app/features/job-seeker/quiz/quiz.component.html",
-          "hash": "16080916107490485646"
+          "hash": "125563242338952144"
         },
         {
           "file": "src/app/features/job-seeker/quiz/quiz.component.spec.ts",
@@ -513,11 +512,12 @@
         },
         {
           "file": "src/app/features/job-seeker/quiz/quiz.component.ts",
-          "hash": "2335505500935012710",
+          "hash": "8631619019794511766",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
-            "npm:@taiga-ui/kit"
+            "npm:@taiga-ui/kit",
+            "npm:@angular/common"
           ]
         },
         {
@@ -526,7 +526,7 @@
         },
         {
           "file": "src/app/features/job-seeker/quiz-question/quiz-question.component.html",
-          "hash": "8257559183871860680"
+          "hash": "13202000570563898291"
         },
         {
           "file": "src/app/features/job-seeker/quiz-question/quiz-question.component.spec.ts",
@@ -897,6 +897,10 @@
         {
           "file": "src/assets/.gitkeep",
           "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/assets/image/quiz/questionBa.jpg",
+          "hash": "7871776982837030634"
         },
         {
           "file": "src/assets/image/quiz/quizePatternImage.jpeg",

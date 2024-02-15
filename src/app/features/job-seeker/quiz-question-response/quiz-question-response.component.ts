@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Option } from '../../../core/interfaces/option';
+import { Option } from '../../../core/model/option';
 
 @Component({
   selector: 'app-question-response',
@@ -7,7 +7,7 @@ import { Option } from '../../../core/interfaces/option';
   imports: [],
   templateUrl: './quiz-question-response.component.html',
   styleUrl: './quiz-question-response.component.css'
-})  
+})
 export class QuizQuestionResponseComponent {
   @Input() option!: Option;
 }
