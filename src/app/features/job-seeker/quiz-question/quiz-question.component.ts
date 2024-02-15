@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {TimerComponent} from "../../../shared/timer/timer.component";
 import {RouterLink} from "@angular/router";
-import {NgOptimizedImage} from "@angular/common";
+import {NgFor, NgOptimizedImage} from "@angular/common";
+import { QuizQuestionResponseComponent } from '../quiz-question-response/quiz-question-response.component';
+import { Question } from '../../../core/interfaces/question';
 
 @Component({
   selector: 'app-quiz-question',
@@ -9,11 +11,13 @@ import {NgOptimizedImage} from "@angular/common";
   imports: [
     TimerComponent,
     RouterLink,
-    NgOptimizedImage
+    NgOptimizedImage,
+    QuizQuestionResponseComponent,
+    NgFor
   ],
   templateUrl: './quiz-question.component.html',
   styleUrl: './quiz-question.component.css'
 })
 export class QuizQuestionComponent {
-
+  @Input() question!: Question;
 }
