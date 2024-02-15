@@ -1,7 +1,7 @@
 import { Gender } from "../enums/gender";
 import { Role } from "../enums/role";
 import { UserStatus } from "../enums/user-status";
-import { Address } from "../model/address";
+import { Address } from "./address";
 
 /**
  * Data Transfer Object (DTO) representing user-related responses.
