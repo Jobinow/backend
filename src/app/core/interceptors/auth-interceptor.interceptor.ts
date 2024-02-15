@@ -13,7 +13,7 @@ export class authInterceptorInterceptor implements HttpInterceptor {
     let headers: HttpHeaders;
     const token: string | null = this.tokenStorage.getAccessToken();
 
-    if (token != null) headers = new HttpHeaders()
+    if (token != null && !request.url.includes("auth")) headers = new HttpHeaders()
       .set('ngrok-skip-browser-warning', 'true')
       .append('Authorization', `Bearer ${token}`);
 
