@@ -8,6 +8,7 @@ import {LoginRequest} from "../model/login-request";
 import {catchError, map} from 'rxjs/operators';
 import {RoutingService} from "./routing.service";
 import {API_URL} from '../../config/api';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root',
@@ -109,18 +110,9 @@ export class AuthenticationService {
     });
   }
 
-  getCurrentAuthenticatedUser() {
-    console.log(this.tokenStorage.getAccessToken());
-
+  getCurrentAuthenticatedUser(): Observable<User> {
     return this.http
-      .get(`${API_URL}/user/current`, {
-        headers: {
-          Authorization: `Bearer ${this.tokenStorage.getAccessToken()}`
-        }
-      })
-      .pipe(map(res => {
-        return res;
-      }));
+      .get<User>(`${API_URL}/user/current`);
   }
 
   logout(): void {

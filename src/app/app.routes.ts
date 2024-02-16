@@ -5,7 +5,7 @@ import {ForgotPasswordComponent} from "./features/auth/forgot-password/forgot-pa
 import {ProfileComponent} from './features/job-seeker/profile/profile.component';
 import {CallbackComponent} from "./features/auth/Oauth/callback/callback.component";
 import { QuizComponent } from './features/job-seeker/quiz/quiz.component';
-import { QuizQuestionComponent } from './features/job-seeker/quiz-question/quiz-question.component';
+import { QuizQuestionCardComponent } from './features/job-seeker/quiz-question-card/quiz-question-card.component';
 
 export const routes: Routes = [
   {
@@ -20,5 +20,5 @@ export const routes: Routes = [
   },
   {path: 'user/profile', component: ProfileComponent},
   {path: 'user/quiz', component: QuizComponent},
-  {path: 'user/quiz/java', component: QuizQuestionComponent},
+  { path: 'user/quiz/java', component: QuizQuestionCardComponent },
 ];
