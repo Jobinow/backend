@@ -117,26 +117,13 @@
                 <div class="available__badges my-4">
                     <h3 class="text-lg text-slate-600 dark:text-white">Available Badges</h3>
                     <div class="available__badges__wrapper grid grid-cols-4 gap-4 py-2">
-                        <div class="current__badge__wrapper flex justify-center">
-                            <a routerLink="/user/quiz" class="current__badge text-white">
-                                <img class="w-full" src="https://skills.thijs.gg/icons?i=html" alt="">
-                            </a>
-                        </div>
-                        <div class="current__badge__wrapper flex justify-center">
-                            <a routerLink="/user/quiz" class="current__badge text-white">
-                                <img class="w-full" src="https://skills.thijs.gg/icons?i=javascript" alt="">
-                            </a>
-                        </div>
-                        <div class="current__badge__wrapper flex justify-center">
-                            <a routerLink="/user/quiz" class="current__badge text-white">
-                                <img class="w-full" src="https://skills.thijs.gg/icons?i=cpp" alt="">
-                            </a>
-                        </div>
-                        <div class="current__badge__wrapper flex justify-center">
-                            <a routerLink="/user/quiz" class="current__badge text-white">
-                                <img class="w-full" src="https://skills.thijs.gg/icons?i=c" alt="">
-                            </a>
-                        </div>
+                        @for (quiz of quizes; track $index) {
+                            <div class="current__badge__wrapper flex justify-center" [title]="quiz.title">
+                                <a [routerLink]="'/user/quiz/' + quiz.id" class="current__badge text-white">
+                                    <img class="w-full" [src]="quiz.imageUrl" [alt]="quiz.title">
+                                </a>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>

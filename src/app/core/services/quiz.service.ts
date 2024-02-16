@@ -21,5 +21,7 @@ export class QuizService {
   /**
    * get a specific resource
    */
-  getQuiz() {}
+  getQuiz(id: string): Observable<Quiz> {
+    return this.http.get<Quiz>(`${API_URL}/quiz/${id}`);
+  }
 }
