@@ -9,6 +9,6 @@ import {Component, Input} from '@angular/core';
 })
 export class TimerComponent {
   @Input() formattedTime = "00:30";
-  @Input() dasharray = 283;
+  @Input() dasharray = '283';
   @Input() remainingPathColor = 'base-timer__path-remaining green';
 }
