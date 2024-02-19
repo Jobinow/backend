@@ -44,9 +44,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.getOauthGoogleUrl().subscribe((url: string) => {
+      console.log(url);
       this.googleOauthUrl = url;
-      if (this.googleOauthUrl != null || this.googleOauthUrl != "")
+      if (this.googleOauthUrl != null || this.googleOauthUrl != "") {
         this.googleOauthUrlNotReady = false;
+      }
     });
 
 

@@ -4,10 +4,11 @@ import { TuiMarkerIconModule } from '@taiga-ui/kit';
 import {AuthBackgroundComponent} from "../../../shared/auth-background/auth-background.component";
 import {NgOptimizedImage} from "@angular/common";
 import {NavBarComponent} from "../../../shared/nav-bar/nav-bar.component";
-import { QuizService } from '../../../core/services/quiz.service';
-import { Quiz } from '../../../core/model/quiz';
 import { Store } from '@ngrx/store';
-import { selectSelectedQuiz } from '../../../core/store/quiz-state/quiz.reducer';
+import {selectSelectedBadge} from "../../../core/store/badge-state/badge.reducer";
+import {Badge} from "../../../core/model/badge";
+import {quizPageActions} from "../../../core/store/quiz-state/actions/quiz-page.actions";
+import {Quiz} from "../../../core/model/quiz";
 
 @Component({
   selector: 'app-quiz',
@@ -24,7 +25,11 @@ import { selectSelectedQuiz } from '../../../core/store/quiz-state/quiz.reducer'
 })
 export class QuizComponent {
 
-  quiz: Signal<Quiz | null | undefined> = this.store.selectSignal(selectSelectedQuiz);
-
+  selectedBadge: Signal<Badge | null | undefined> = this.store.selectSignal(selectSelectedBadge);
   constructor(private currentRoute: ActivatedRoute, private store: Store) { }
+
+  startQuiz() {
+    this.store.dispatch(quizPageActions.selectQuiz({quiz: this.selectedBadge()?.quiz as Quiz}))
+  }
+
 }

@@ -9,5 +9,5 @@ import { Question } from '../../../core/model/question';
   styleUrl: './true-false-question.component.css'
 })
 export class TrueFalseQuestionComponent {
-  @Input({ required: true }) question!: Question;
+  @Input({required: true }) question!: Question;
 }

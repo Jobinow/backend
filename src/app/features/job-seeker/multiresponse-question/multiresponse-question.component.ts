@@ -12,5 +12,5 @@ import { NgFor } from '@angular/common';
   styleUrl: './multiresponse-question.component.css'
 })
 export class MultiresponseQuestionComponent {
-  @Input({ required: true }) question!: Question;
+  @Input({required: true }) question!: Question;
 }

@@ -19,6 +19,6 @@ export const routes: Routes = [
     ]
   },
   {path: 'user/profile', component: ProfileComponent},
-  { path: 'user/quiz/:id', component: QuizComponent },
-  { path: 'user/quiz/java', component: QuizQuestionCardComponent },
+  { path: 'user/quiz/:name', component: QuizComponent },
+  { path: 'user/quiz/:name/questions', component: QuizQuestionCardComponent },
 ];
