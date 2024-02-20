@@ -139,7 +139,7 @@ export class QuizQuestionCardComponent implements OnInit {
 
 
   /**
-   * switch component based on question type
+   * switch component based on a question type
    */
   multiChoice: QuestionType = QuestionType.MULTIPLE_CHOICE;
   multiResponse: QuestionType = QuestionType.MULTIPLE_RESPONSE;
