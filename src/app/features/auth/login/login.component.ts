@@ -44,14 +44,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.getOauthGoogleUrl().subscribe((url: string) => {
-      console.log(url);
       this.googleOauthUrl = url;
-      if (this.googleOauthUrl != null || this.googleOauthUrl != "") {
-        this.googleOauthUrlNotReady = false;
-      }
     });
 
-
+    if (this.googleOauthUrl != null || this.googleOauthUrl != "")
+      this.googleOauthUrlNotReady = false;
   }
 
   loginForm: FormGroup<any> = new FormGroup({
@@ -107,4 +104,15 @@ export class LoginComponent implements OnInit {
 
 
   protected readonly events = events;
+
+  goToOauthGoogle() {
+    if (this.googleOauthUrl != null || this.googleOauthUrl != "")
+      location.assign(this.googleOauthUrl as string)
+else
+    this.alerts.open('', {
+      label: 'Invalid Google auth url',
+      status: 'error',
+      autoClose: true,
+    }).subscribe();
+  }
 }
