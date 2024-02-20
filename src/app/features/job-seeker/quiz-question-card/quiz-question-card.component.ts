@@ -118,7 +118,7 @@ export class QuizQuestionCardComponent implements OnInit {
     if (this.countDown > 0)
       this.timer = setTimeout(() => {
         this.countDown--;
-        this.timePassed+= 1;
+        this.timePassed += 1;
         this.timeLeft = this.TIME_LIMIT - this.timePassed;
         this.displayTime = this.formattedTime(this.countDown);
         this.setRemainingPathColor(this.timeLeft, this.TIME_LIMIT);
