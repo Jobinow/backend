@@ -1,5 +1,6 @@
 import { AbstractResponse } from "./abstract-response";
 import { Quiz } from "./quiz";
+import {User} from "./user";
 
 /**
  * Data Transfer Object (DTO) for sending response data related to an Assessment.
@@ -7,7 +8,7 @@ import { Quiz } from "./quiz";
  */
 export interface AssessmentResponseDto extends AbstractResponse {
     quiz: Quiz;
-    user: {};
+    user: User;
     startedAt: Date;
     finishedAt?: Date;
     percentageResult: number;

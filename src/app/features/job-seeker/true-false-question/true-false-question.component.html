@@ -4,21 +4,28 @@
     </div>
     <div class="sm:my-7">
         <div class="pb-10">
-            <p class="text-2xl font-semibold text-center">
-                {{question?.text}}
-            </p>
+            <pre class="text-2xl font-semibold text-center">
+                {{question.text}}
+            </pre>
         </div>
         <div class="grid sm:grid-cols-2 gap-6">
+          @for (option of question.options; track option.id) {
             <label
-                class="flex items-center justify-center w-full px-6 py-4 text-lg bg-red-600 text-white font-medium rounded hover:bg-primary-dark transition duration-300 cursor-pointer has-[:checked]:bg-black">
-                <input type="radio" [value]="question.options[0].content" name="response" id="true" class="appearance-none">
-                {{ question.options[0].content }}
+              class="flex items-center justify-center w-full px-6 py-4 text-lg bg-red-600 text-white font-medium rounded hover:bg-primary-dark transition duration-300 cursor-pointer has-[:checked]:bg-black">
+              <input type="radio" [value]="option.content" name="response-{{option.id}}" id="response-{{option.id}}" class="appearance-none">
+              {{ option.content }}
             </label>
-            <label
-                class="flex items-center justify-center w-full px-6 py-4 text-lg bg-blue-600 text-white font-medium rounded hover:bg-primary-dark transition duration-300 cursor-pointer has-[:checked]:bg-black">
-                <input type="radio" [value]="question.options[1].content" name="response" id="false" class="appearance-none">
-                {{ question.options[1].content }}
-            </label>
+          }
+<!--            <label-->
+<!--                class="flex items-center justify-center w-full px-6 py-4 text-lg bg-red-600 text-white font-medium rounded hover:bg-primary-dark transition duration-300 cursor-pointer has-[:checked]:bg-black">-->
+<!--                <input type="radio" [value]="question.options[0].content" name="response" id="true" class="appearance-none">-->
+<!--                {{ question.options[0].content }}-->
+<!--            </label>-->
+<!--            <label-->
+<!--                class="flex items-center justify-center w-full px-6 py-4 text-lg bg-blue-600 text-white font-medium rounded hover:bg-primary-dark transition duration-300 cursor-pointer has-[:checked]:bg-black">-->
+<!--                <input type="radio" [value]="question.options[1].content" name="response" id="false" class="appearance-none">-->
+<!--                {{ question.options[1].content }}-->
+<!--            </label>-->
         </div>
     </div>
 </div>
