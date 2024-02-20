@@ -2,7 +2,7 @@ import {Component, Input, Signal} from '@angular/core';
 import { Question } from '../../../core/model/question';
 import { TimerComponent } from '../../../shared/timer/timer.component';
 import { MultichoicesQuestionComponent } from '../multichoices-question/multichoices-question.component';
-import { QuestionType } from '../../../core/enums/questio-type';
+import { QuestionType } from '../../../core/enums/question-type';
 import { MultiresponseQuestionComponent } from '../multiresponse-question/multiresponse-question.component';
 import { TrueFalseQuestionComponent } from '../true-false-question/true-false-question.component';
 import {Store} from "@ngrx/store";
