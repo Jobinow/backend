@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <!-- question -->
-                @switch (currentQuestion && currentQuestion?.type) {
+                @switch (currentQuestion && currentQuestion.type) {
                     @case (multiChoice) {
                         <app-multichoices-question [question]="currentQuestion"></app-multichoices-question>
                     }
