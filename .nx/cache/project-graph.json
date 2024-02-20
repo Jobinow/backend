@@ -2726,6 +2726,42 @@
         "hash": "sha512-QdGYdEdC0AzFonLfNOnyYyeCwnvK9jlskoeefvJN3Yyvds3ivBrrTjpeDOdiLsQpCPBp9/673imgq7355vkQow=="
       }
     },
+    "npm:@ngrx/effects": {
+      "type": "npm",
+      "name": "npm:@ngrx/effects",
+      "data": {
+        "version": "17.1.0",
+        "packageName": "@ngrx/effects",
+        "hash": "sha512-aU/4KUCHdr5Vk/fOwtEnJ/AHhI6ZLHRTKxdkRw89qAtaJJiK0JAiuGIDlOvnP7alPi6SvIpMohD+Bz7M/jUAKQ=="
+      }
+    },
+    "npm:@ngrx/operators": {
+      "type": "npm",
+      "name": "npm:@ngrx/operators",
+      "data": {
+        "version": "17.0.0-beta.0",
+        "packageName": "@ngrx/operators",
+        "hash": "sha512-EbO8AONuQ6zo2v/mPyBOi4y0CTAp1x4Z+bx7ZF+Pd8BL5ma53BTCL1TmzaeK5zPUe0yApudLk9/ZbHXPnVox5A=="
+      }
+    },
+    "npm:@ngrx/store": {
+      "type": "npm",
+      "name": "npm:@ngrx/store",
+      "data": {
+        "version": "17.1.0",
+        "packageName": "@ngrx/store",
+        "hash": "sha512-25dGaDRssJ7Yi3TixbSG4j1wzMiKNICGU/owAPn/EBIvTgdI4MO6crh9dt/L7MWSrIpXpQdp6NT5xlMm5YLT5A=="
+      }
+    },
+    "npm:@ngrx/store-devtools": {
+      "type": "npm",
+      "name": "npm:@ngrx/store-devtools",
+      "data": {
+        "version": "17.1.0",
+        "packageName": "@ngrx/store-devtools",
+        "hash": "sha512-sJxyyrMul6lh555PHjbCwk3uaw7bVOX1RNw7rPDpZSiD+CQwvtnD3xZxzx2Q21v7OPMlqr/ncjzbht9lSiGDRw=="
+      }
+    },
     "npm:@ngtools/webpack": {
       "type": "npm",
       "name": "npm:@ngtools/webpack",
@@ -12161,6 +12197,21 @@
       },
       {
         "source": "jobinow",
+        "target": "npm:@ngrx/effects",
+        "type": "static"
+      },
+      {
+        "source": "jobinow",
+        "target": "npm:@ngrx/store",
+        "type": "static"
+      },
+      {
+        "source": "jobinow",
+        "target": "npm:@ngrx/store-devtools",
+        "type": "static"
+      },
+      {
+        "source": "jobinow",
         "target": "npm:@nrwl/angular",
         "type": "static"
       },
@@ -16516,6 +16567,79 @@
       },
       {
         "source": "npm:@ng-web-apis/resize-observer",
+        "target": "npm:tslib",
+        "type": "static"
+      }
+    ],
+    "npm:@ngrx/effects": [
+      {
+        "source": "npm:@ngrx/effects",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ngrx/effects",
+        "target": "npm:@ngrx/store",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ngrx/effects",
+        "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ngrx/effects",
+        "target": "npm:@ngrx/operators",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ngrx/effects",
+        "target": "npm:tslib",
+        "type": "static"
+      }
+    ],
+    "npm:@ngrx/operators": [
+      {
+        "source": "npm:@ngrx/operators",
+        "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ngrx/operators",
+        "target": "npm:tslib",
+        "type": "static"
+      }
+    ],
+    "npm:@ngrx/store": [
+      {
+        "source": "npm:@ngrx/store",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ngrx/store",
+        "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ngrx/store",
+        "target": "npm:tslib",
+        "type": "static"
+      }
+    ],
+    "npm:@ngrx/store-devtools": [
+      {
+        "source": "npm:@ngrx/store-devtools",
+        "target": "npm:@ngrx/store",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ngrx/store-devtools",
+        "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "npm:@ngrx/store-devtools",
         "target": "npm:tslib",
         "type": "static"
       }

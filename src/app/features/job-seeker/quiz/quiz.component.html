@@ -24,7 +24,7 @@
             </p>
           </div>
           <div class="quiz__title text-center w-full">
-            <h1 class="text-2xl font-semibold">{{quiz() && quiz()?.title}}</h1>
+            <h1 class="text-2xl font-semibold">{{selectedBadge() && selectedBadge()?.quiz?.title}}</h1>
           </div>
           <div class="quiz__total__questions flex items-center gap-2">
             <div class="icon">
@@ -35,7 +35,7 @@
                 </path>
               </svg>
             </div>
-            <p class="text-lg font-medium flex items-end gap-1">{{quiz()?.questions?.length}}<span
+            <p class="text-lg font-medium flex items-end gap-1">{{selectedBadge()?.quiz?.questions?.length}}<span
                 class="time text-sm sr-only sm:not-sr-only">Questions</span>
             </p>
           </div>
@@ -43,11 +43,11 @@
         <div class="card__body">
           <div class="md:grid md:grid-cols-3 gap-6 my-10 flex flex-col border-y-4 py-10">
             <div class="quiz__icon flex col-span-1 items-center justify-center">
-              <img [src]="quiz() && quiz()?.imageUrl" class="w-64 h-64object-cover" alt="">
+              <img [src]="selectedBadge() && selectedBadge()?.quiz?.imageUrl" class="w-64 h-64object-cover" alt="">
             </div>
             <div class="quiz__description py-5 col-span-2 flex items-center justify-center">
               <p class="text-base italic text-center">
-                "{{quiz()?.description}}"
+                "{{selectedBadge()?.quiz?.description}}"
               </p>
             </div>
           </div>
@@ -55,10 +55,10 @@
             <div class="flex items-center justify-center gap-4">
               <button class="cancel__quiz px-6 py-2 bg-neutral-content text-black text-lg font-medium rounded">Cancel
               </button>
-              <button routerLink="/user/quiz/java"
-                class="start__quiz px-6 py-2 bg-blue-400 text-white text-lg font-medium rounded">Start
-                Quiz
-              </button>
+              <a (click)="startQuiz()" [routerLink]="'/user/quiz/' + selectedBadge()?.quiz?.title + '/questions'"
+                class="start__quiz px-6 py-2 bg-blue-400 text-white text-lg font-medium rounded">
+                Start Quiz
+              </a>
             </div>
           </div>
         </div>

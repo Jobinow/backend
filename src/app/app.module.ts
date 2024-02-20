@@ -12,6 +12,7 @@ import { QuizStateModule } from './core/store/quiz-state/quiz-state.module';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import {BadgeStateModule} from "./core/store/badge-state/badge-state.module";
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     EffectsModule.forRoot(),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode(), autoPause: true, trace: false, traceLimit: 75 }),
     QuizStateModule,
+    BadgeStateModule
   ],
   providers: [
     Range,

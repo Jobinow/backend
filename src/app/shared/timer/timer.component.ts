@@ -8,7 +8,7 @@ import {Component, Input} from '@angular/core';
   styleUrl: './timer.component.css'
 })
 export class TimerComponent {
-  @Input() formattedTime = '00:30';
-  @Input() dasharray = 283;
+  @Input() formattedTime = "00:30";
+  @Input() dasharray = '283';
   @Input() remainingPathColor = 'base-timer__path-remaining green';
 }

@@ -5,7 +5,7 @@ import { quizApiActions } from "./actions/quiz-api.actions";
 
 interface QuizStateInterface {
     collection: Quiz[],
-    selectedQuiz: Quiz | null | undefined,
+    selectedQuiz: Quiz | undefined,
     loading: boolean,
     errors: {}
 }

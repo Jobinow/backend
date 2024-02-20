@@ -116,13 +116,22 @@
                 </div>
                 <div class="available__badges my-4">
                     <h3 class="text-lg text-slate-600 dark:text-white">Available Badges</h3>
+                    <div class="tui-island__content">
+                      <figure class="tui-island__figure">
+                        <div
+                          class="some-figure"
+                          [class.tui-skeleton_rounded]="loading()"
+                          [class.tui-skeleton]="loading()"
+                        ></div>
+                      </figure>
+                    </div>
                     <div class="available__badges__wrapper grid grid-cols-4 gap-4 py-2">
-                        @for (quiz of quizes(); track $index) {
-                            <div (click)="selectQuiz(quiz)" class="current__badge__wrapper flex justify-center" [title]="quiz.title">
+                        @for (badge of badges(); track $index) {
+                            <a [routerLink]="'/user/quiz/' + badge.name" (click)="selectBadge(badge)" class="current__badge__wrapper flex justify-center" [title]="badge.name">
                                 <!-- <a [routerLink]="'/user/quiz/' + quiz.id" class="current__badge text-white"> -->
-                                    <img class="w-full" [src]="quiz.imageUrl" [alt]="quiz.title">
+                                    <img class="w-full" [src]="badge.imageUrl" [alt]="badge.name">
                                 <!-- </a> -->
-                            </div>
+                            </a>
                         }
                     </div>
                 </div>
