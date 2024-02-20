@@ -23,6 +23,9 @@ import {selectSelectedQuiz} from "../../../core/store/quiz-state/quiz.reducer";
 })
 export class QuizQuestionCardComponent implements OnInit {
 
+  constructor(private store: Store) {
+  }
+
   quiz: Signal<Quiz | undefined> = this.store.selectSignal(selectSelectedQuiz);
 
   currentQuestionIndex = 1;
@@ -48,11 +51,9 @@ export class QuizQuestionCardComponent implements OnInit {
 
   timer: NodeJS.Timeout | undefined = undefined;
 
-  constructor(private store: Store) {
-  }
-
   async ngOnInit() {
     this.countDown = this.currentQuestion.time
+    this.TIME_LIMIT = this.currentQuestion.time;
     this.displayTime = this.formattedTime(this.countDown);
     await this.countDownTimer();
   }
@@ -60,9 +61,8 @@ export class QuizQuestionCardComponent implements OnInit {
   formattedTime(countDown: number): string {
     const minutes = Math.floor(countDown / 60);
     let seconds: number | string = countDown % 60;
-    if (seconds < 10) {
+    if (seconds < 10)
       seconds = `0${seconds}`;
-    }
     return `${minutes}:${seconds}`;
   }
 
@@ -74,11 +74,10 @@ export class QuizQuestionCardComponent implements OnInit {
 
   setRemainingPathColor(timeLeft: number, baseTime: number) {
     const {alert, warning} = this.COLOR_CODES;
-    if (timeLeft <= Math.floor(baseTime * this.ALERT_THRESHOLD)) {
+    if (timeLeft <= Math.floor(baseTime * this.ALERT_THRESHOLD))
       this.remainingPathColor = 'base-timer__path-remaining ' + alert.color;
-    } else if (timeLeft <= Math.floor(baseTime * this.WARNING_THRESHOLD)) {
+    else if (timeLeft <= Math.floor(baseTime * this.WARNING_THRESHOLD))
       this.remainingPathColor = 'base-timer__path-remaining ' + warning.color;
-    }
   }
 
   incrementCurrentQuestion = () => {
@@ -116,17 +115,17 @@ export class QuizQuestionCardComponent implements OnInit {
   }
 
   async countDownTimer() {
-    if (this.countDown > 0) {
+    if (this.countDown > 0)
       this.timer = setTimeout(() => {
         this.countDown--;
-        this.timePassed += 1;
+        this.timePassed+= 1;
         this.timeLeft = this.TIME_LIMIT - this.timePassed;
         this.displayTime = this.formattedTime(this.countDown);
         this.setRemainingPathColor(this.timeLeft, this.TIME_LIMIT);
         this.dashArray = this.getDashArray();
         this.countDownTimer();
       }, 1000);
-    } else if (this.countDown === 0) {
+    else if (this.countDown === 0) {
       await this.setDefaultTimer();
 
       if (this.currentQuestionIndex === this.quiz()?.questions.length)
@@ -134,13 +133,8 @@ export class QuizQuestionCardComponent implements OnInit {
       else
         await this.handleNextQuestion();
 
-    } else {
+    } else
       clearTimeout(this.timer);
-    }
-  }
-
-  get timerClass() {
-    return this.countDown < 10 ? 'warning' : 'count-down';
   }
 
 

@@ -12197,6 +12197,21 @@
       },
       {
         "source": "jobinow",
+        "target": "npm:@ngrx/effects",
+        "type": "static"
+      },
+      {
+        "source": "jobinow",
+        "target": "npm:@ngrx/store",
+        "type": "static"
+      },
+      {
+        "source": "jobinow",
+        "target": "npm:@ngrx/store-devtools",
+        "type": "static"
+      },
+      {
+        "source": "jobinow",
         "target": "npm:@nrwl/angular",
         "type": "static"
       },
