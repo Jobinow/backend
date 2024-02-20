@@ -8,6 +8,7 @@ import {Store} from "@ngrx/store";
 import {Quiz} from "../../../core/model/quiz";
 import {selectSelectedQuiz} from "../../../core/store/quiz-state/quiz.reducer";
 import {QuestionType} from "../../../core/enums/question-type";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-quiz-question',
@@ -16,7 +17,8 @@ import {QuestionType} from "../../../core/enums/question-type";
     TimerComponent,
     MultichoicesQuestionComponent,
     MultiresponseQuestionComponent,
-    TrueFalseQuestionComponent
+    TrueFalseQuestionComponent,
+    NgIf
   ],
   templateUrl: './quiz-question-card.component.html',
   styleUrl: './quiz-question-card.component.css'
@@ -40,6 +42,8 @@ export class QuizQuestionCardComponent implements OnInit {
     warning: {color: "orange", threshold: this.WARNING_THRESHOLD},
     alert: {color: "red", threshold: this.ALERT_THRESHOLD}
   };
+
+  key = true;
 
   TIME_LIMIT = 30;
   timePassed = 0;
@@ -82,6 +86,7 @@ export class QuizQuestionCardComponent implements OnInit {
 
   incrementCurrentQuestion = () => {
     return new Promise((resolve) => {
+      this.key = !this.key;
       this.currentQuestionIndex++;
       this.currentQuestion = this.quiz()?.questions[this.currentQuestionIndex - 1] as Question;
       this.countDown = this.currentQuestion.time;

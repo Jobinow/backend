@@ -6,7 +6,7 @@
     {{ currentQuestion.type }}
   </div>
   <div class="fixed top-7 right-7">
-    {{ currentQuestionIndex + 1 }}
+    {{ currentQuestionIndex }}
   </div>
   <div class="relative container mx-auto grid grid-cols-1 md:grid-cols-5 px-4 md:px-20 xl:px-72 w-full">
     <div
@@ -15,13 +15,6 @@
         <img src="/assets/image/quiz/quizePatternImage.jpeg" fill class="h-full w-full" alt="bg-image"/>
       </div>
       <div class="relative z-20">
-        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <app-timer
-            [dasharray]="dashArray"
-            [formattedTime]="displayTime"
-            [remainingPathColor]="remainingPathColor"
-          ></app-timer>
-        </div>
         <div class="flex justify-between mb-20 md:mb-0">
           <div class="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -32,9 +25,7 @@
             </svg>
             <p class="text-lg flex justify-center items-center gap-3 font-medium">
               {{ currentQuestion && currentQuestion.time }}
-              <span class="text-sm">
-                                Seconds
-                            </span>
+              <span class="text-sm">Seconds</span>
             </p>
           </div>
           <div class="quiz__title text-center w-full">
@@ -54,6 +45,21 @@
                             </span>
             </p>
           </div>
+        </div>
+        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          @if (key) {
+            <app-timer
+              [dasharray]="dashArray"
+              [formattedTime]="displayTime"
+              [remainingPathColor]="remainingPathColor"
+            ></app-timer>
+          } @else {
+            <app-timer
+              [dasharray]="dashArray"
+              [formattedTime]="displayTime"
+              [remainingPathColor]="remainingPathColor"
+            ></app-timer>
+          }
         </div>
         <!-- question -->
         @switch (currentQuestion && currentQuestion?.type) {
