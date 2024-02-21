@@ -11,3 +11,10 @@ section {
 .label {
     font: var(--tui-font-text-l);
 }
+
+.banner{
+  height: 16rem;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: -2rem
+}

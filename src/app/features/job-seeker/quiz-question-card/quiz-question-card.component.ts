@@ -2,12 +2,13 @@ import {Component, OnInit, Signal} from '@angular/core';
 import {Question} from '../../../core/model/question';
 import {TimerComponent} from '../../../shared/timer/timer.component';
 import {MultichoicesQuestionComponent} from '../multichoices-question/multichoices-question.component';
-import {QuestionType} from '../../../core/enums/questio-type';
 import {MultiresponseQuestionComponent} from '../multiresponse-question/multiresponse-question.component';
 import {TrueFalseQuestionComponent} from '../true-false-question/true-false-question.component';
 import {Store} from "@ngrx/store";
 import {Quiz} from "../../../core/model/quiz";
 import {selectSelectedQuiz} from "../../../core/store/quiz-state/quiz.reducer";
+import {QuestionType} from "../../../core/enums/question-type";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-quiz-question',
@@ -16,7 +17,8 @@ import {selectSelectedQuiz} from "../../../core/store/quiz-state/quiz.reducer";
     TimerComponent,
     MultichoicesQuestionComponent,
     MultiresponseQuestionComponent,
-    TrueFalseQuestionComponent
+    TrueFalseQuestionComponent,
+    NgIf
   ],
   templateUrl: './quiz-question-card.component.html',
   styleUrl: './quiz-question-card.component.css'
@@ -40,6 +42,8 @@ export class QuizQuestionCardComponent implements OnInit {
     warning: {color: "orange", threshold: this.WARNING_THRESHOLD},
     alert: {color: "red", threshold: this.ALERT_THRESHOLD}
   };
+
+  key = true;
 
   TIME_LIMIT = 30;
   timePassed = 0;
@@ -82,6 +86,7 @@ export class QuizQuestionCardComponent implements OnInit {
 
   incrementCurrentQuestion = () => {
     return new Promise((resolve) => {
+      this.key = !this.key;
       this.currentQuestionIndex++;
       this.currentQuestion = this.quiz()?.questions[this.currentQuestionIndex - 1] as Question;
       this.countDown = this.currentQuestion.time;
@@ -118,7 +123,7 @@ export class QuizQuestionCardComponent implements OnInit {
     if (this.countDown > 0)
       this.timer = setTimeout(() => {
         this.countDown--;
-        this.timePassed+= 1;
+        this.timePassed += 1;
         this.timeLeft = this.TIME_LIMIT - this.timePassed;
         this.displayTime = this.formattedTime(this.countDown);
         this.setRemainingPathColor(this.timeLeft, this.TIME_LIMIT);
@@ -139,7 +144,7 @@ export class QuizQuestionCardComponent implements OnInit {
 
 
   /**
-   * switch component based on question type
+   * switch component based on a question type
    */
   multiChoice: QuestionType = QuestionType.MULTIPLE_CHOICE;
   multiResponse: QuestionType = QuestionType.MULTIPLE_RESPONSE;

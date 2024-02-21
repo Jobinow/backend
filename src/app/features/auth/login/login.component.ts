@@ -1,12 +1,12 @@
-import { ChangeDetectionStrategy, Component, Inject, OnInit } from '@angular/core';
-import { TuiAlertService, TuiButtonModule, TuiTextfieldControllerModule } from '@taiga-ui/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
-import { TUI_PASSWORD_TEXTS, TuiInputModule, TuiInputPasswordModule, TuiMarkerIconModule } from '@taiga-ui/kit';
-import { of } from 'rxjs';
+import {ChangeDetectionStrategy, Component, Inject, OnInit} from '@angular/core';
+import {TuiAlertService, TuiButtonModule, TuiTextfieldControllerModule} from '@taiga-ui/core';
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+import {TUI_PASSWORD_TEXTS, TuiInputModule, TuiInputPasswordModule, TuiMarkerIconModule} from '@taiga-ui/kit';
+import {of} from 'rxjs';
 import * as events from "events";
-import { AuthLayoutComponent } from "../../../layout/auth-layout/auth-layout.component";
-import { AuthenticationService } from "../../../core/services/authentication.service";
-import { RoutingService } from "../../../core/services/routing.service";
+import {AuthLayoutComponent} from "../../../layout/auth-layout/auth-layout.component";
+import {AuthenticationService} from "../../../core/services/authentication.service";
+import {RoutingService} from "../../../core/services/routing.service";
 
 @Component({
   selector: 'app-login',
@@ -44,14 +44,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.getOauthGoogleUrl().subscribe((url: string) => {
-      console.log(url);
       this.googleOauthUrl = url;
-      if (this.googleOauthUrl != null || this.googleOauthUrl != "") {
-        this.googleOauthUrlNotReady = false;
-      }
     });
 
-
+    if (this.googleOauthUrl != null || this.googleOauthUrl != "")
+      this.googleOauthUrlNotReady = false;
   }
 
   loginForm: FormGroup<any> = new FormGroup({
@@ -107,4 +104,15 @@ export class LoginComponent implements OnInit {
 
 
   protected readonly events = events;
+
+  goToOauthGoogle() {
+    if (this.googleOauthUrl != null || this.googleOauthUrl != "")
+      location.assign(this.googleOauthUrl as string)
+    else
+      this.alerts.open('', {
+        label: 'Invalid Google auth url',
+        status: 'error',
+        autoClose: true,
+      }).subscribe();
+  }
 }
